@@ -4,8 +4,16 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image';
 import { useRouter } from 'next/navigation'
 
+interface Producto {
+  id: number;
+  name: string;
+  price: number;
+  stock: number;
+  image_url: string;
+}
+
 export default function AdminPage() {
-  const [productos, setProductos] = useState<any[]>([])
+  const [productos, setProductos] = useState<Producto[]>([])
   const router = useRouter()
 
   // Validación de autenticación y rol
