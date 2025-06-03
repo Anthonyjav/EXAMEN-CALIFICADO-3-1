@@ -39,7 +39,7 @@ export default function HomePage() {
 
   const agregarAlCarrito = (producto: Producto) => {
     const carritoStr = localStorage.getItem('carrito');
-    let carrito: { producto: Producto; cantidad: number }[] = carritoStr ? JSON.parse(carritoStr) : [];
+    const carrito: { producto: Producto; cantidad: number }[] = carritoStr ? JSON.parse(carritoStr) : [];
 
     const index = carrito.findIndex(item => item.producto.id === producto.id);
     if (index !== -1) {

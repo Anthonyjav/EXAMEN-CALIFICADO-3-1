@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Image from 'next/image';
 import { useRouter } from 'next/navigation'
 
 export default function AdminPage() {
@@ -93,7 +94,7 @@ export default function AdminPage() {
                   className="hover:bg-gray-50 transition-colors cursor-pointer"
                 >
                   <td className="px-4 py-3">
-                    <img
+                    <Image
                       src={producto.image_url}
                       alt={producto.name}
                       className="w-20 h-20 object-cover rounded-md border"
